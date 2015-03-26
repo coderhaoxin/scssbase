@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+test() {
+  sass test/index.scss test/index.css
+  rm test/index.css.map
+}
+
+build() {
+  sass index.scss index.css
+  sass mixin.scss mixin.css
+  sass reset.scss reset.css
+  sass util.scss util.css
+  rm *.css.map
+}
+
+clean() {
+  rm *.css test/*.css # *.css.map test/*.css.map
+}
+
+case $1 in
+  clean)
+    clean
+  ;;
+  build)
+    build
+  ;;
+  test)
+    test
+  ;;
+  *)
+    echo unknown!
+  ;;
+esac
