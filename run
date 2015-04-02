@@ -7,9 +7,6 @@ test() {
 
 build() {
   sass index.scss index.css
-  sass mixin.scss mixin.css
-  sass reset.scss reset.css
-  sass util.scss util.css
   rm *.css.map
 }
 
