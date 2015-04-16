@@ -7,11 +7,13 @@ test() {
 
 build() {
   sass index.scss index.css
+  sass example/flexbox.scss example/flexbox.css
+  rm example/*.css.map
   rm *.css.map
 }
 
 clean() {
-  rm *.css test/*.css # *.css.map test/*.css.map
+  rm *.css test/*.css example/*.css # *.css.map test/*.css.map
 }
 
 case $1 in

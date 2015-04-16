@@ -1,0 +1,64 @@
+@import "../mixin";
+
+.row {
+  @include flexbox(row, null, null, null);
+  box-sizing: border-box;
+  height: 80px;
+
+  .avatar {
+    @include flexbox(null, center, center, null);
+    @include flexorder(1);
+    background: red;
+    width: 80px;
+
+    span {
+      width: 40px;
+      height: 40px;
+      font-size: 32px;
+    }
+  }
+
+  .desc {
+    @include flexbox(column, null, null, null);
+    @include flexorder(2);
+    background: yellow;
+    font-size: 26px;
+    width: 160px;
+
+    .title {
+      @include flexbox(null, flex-start, null, null);
+    }
+
+    .info {
+      @include flexbox(null, flex-end, null, null);
+    }
+
+    .address {
+      @include flexbox(null, flex-start, null, null);
+      position: relative;
+      top: -10px;
+    }
+  }
+
+  .note {
+    @include flexbox(column, null, null, null);
+    @include flexorder(3);
+    background: blue;
+    font-size: 12px;
+    width: 80px;
+
+    .price {
+      @include flexbox(null, flex-end, null, null);
+    }
+
+    .icon {
+      @include flexbox(null, center, null, null);
+      font-size: 32px;
+    }
+
+    .state {
+      @include flexbox(null, flex-start, null, null);
+      padding-top: 15px;
+    }
+  }
+}

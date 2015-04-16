@@ -1,0 +1,82 @@
+
+@mixin flexbox($direction, $x, $y, $wrap) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+
+  @if $direction == row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: $direction;
+    flex-direction: $direction;
+  } @else if $direction == row-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: $direction;
+    flex-direction: $direction;
+  } @else if $direction == column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: $direction;
+    flex-direction: $direction;
+  } @else if $direction == column-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: $direction;
+    flex-direction: $direction;
+  }
+
+  @if $x == flex-start {
+    -webkit-box-pack: start;
+    -webkit-justify-content: $x;
+    justify-content: $x;
+  } @else if $x == flex-end {
+    -webkit-box-pack: end;
+    -webkit-justify-content: $x;
+    justify-content: $x;
+  } @else if $x == center {
+    -webkit-box-pack: center;
+    -webkit-justify-content: $x;
+    justify-content: $x;
+  } @else if $x == space-between {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: $x;
+    justify-content: $x;
+  } @else if $x == space-around {
+    -webkit-justify-content: $x;
+    justify-content: $x;
+  }
+
+  @if $y == flex-start {
+    -webkit-box-align: start;
+    -webkit-align-items: $y;
+    align-items: $y;
+  } @else if $y == flex-end {
+    -webkit-box-align: end;
+    -webkit-align-items: $y;
+    align-items: $y;
+  } @else if $y == center {
+    -webkit-box-align: center;
+    -webkit-align-items: $y;
+    align-items: $y;
+  } @else if $y == baseline {
+    -webkit-box-align: center;
+    -webkit-align-items: $y;
+    align-items: $y;
+  } @else if $y == stretch {
+    -webkit-box-align: center;
+    -webkit-align-items: $y;
+    align-items: $y;
+  }
+
+  @if $wrap {
+    -webkit-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+  }
+}
+
+@mixin flexorder($num) {
+  -webkit-box-ordinal-group: $num;
+  -webkit-order: $num;
+  order: $num;
+}
