@@ -7,7 +7,7 @@
 
   .avatar {
     @include flexbox(null, center, center, null);
-    @include flexorder(1);
+    @include flexitem(1, null);
     background: red;
     width: 80px;
 
@@ -20,7 +20,7 @@
 
   .desc {
     @include flexbox(column, null, null, null);
-    @include flexorder(2);
+    @include flexitem(2, null);
     background: yellow;
     font-size: 26px;
     width: 160px;
@@ -42,7 +42,7 @@
 
   .note {
     @include flexbox(column, null, null, null);
-    @include flexorder(3);
+    @include flexitem(3, null);
     background: blue;
     font-size: 12px;
     width: 80px;
@@ -60,5 +60,40 @@
       @include flexbox(null, flex-start, null, null);
       padding-top: 15px;
     }
+  }
+}
+
+.box {
+  @include flexbox(row, null, null, null);
+  box-sizing: border-box;
+  font-size: 12px;
+  width: 320px;
+  height: 80px;
+
+  p {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+  }
+
+  .avatar {
+    @include flexbox(null, center, center, nowrap);
+    @include flexitem(1, 1);
+    background: red;
+    width: 40px;
+  }
+
+  .desc {
+    @include flexbox(column, null, null, wrap);
+    @include flexitem(2, 3);
+    background: yellow;
+    width: 40px;
+  }
+
+  .note {
+    @include flexbox(column, null, null, nowrap);
+    @include flexitem(3, 1);
+    background: blue;
+    width: 40px;
   }
 }

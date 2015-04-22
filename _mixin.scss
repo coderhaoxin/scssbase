@@ -69,14 +69,27 @@
     align-items: $y;
   }
 
-  @if $wrap {
+  @if $wrap == wrap {
+    -webkit-box-lines: multiple;
+    -webkit-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+  } @else if $wrap == nowrap {
+    -webkit-box-lines: single;
     -webkit-flex-wrap: $wrap;
     flex-wrap: $wrap;
   }
 }
 
-@mixin flexorder($num) {
-  -webkit-box-ordinal-group: $num;
-  -webkit-order: $num;
-  order: $num;
+@mixin flexitem($order, $grow) {
+  @if $order {
+    -webkit-box-ordinal-group: $order;
+    -webkit-order: $order;
+    order: $order;
+  }
+
+  @if $grow {
+    -webkit-box-flex: $grow;
+    -webkit-flex-grow: $grow;
+    flex-grow: $grow;
+  }
 }
