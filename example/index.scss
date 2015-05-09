@@ -1,0 +1,13 @@
+@import "../mixin";
+@import "../util";
+
+.text01 {
+  @include wordblock;
+  width: rem(80px);
+  height: rem(40px);
+}
+
+.text02 {
+  @include wordline;
+  width: rem(80px);
+}

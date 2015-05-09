@@ -93,3 +93,31 @@
     flex-grow: $grow;
   }
 }
+
+@mixin griditem($row-start, $row-end, $column-start, $column-end) {
+  @if $row-start {
+    grid-row-start: $row-start;
+  }
+  @if $row-end {
+    grid-row-end: $row-end;
+  }
+  @if $column-start {
+    grid-column-start: $column-start;
+  }
+  @if $column-end {
+    grid-column-end: $column-end;
+  }
+}
+
+@mixin wordblock {
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin wordline {
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
