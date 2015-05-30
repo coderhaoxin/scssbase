@@ -1,4 +1,4 @@
-@import "../mixin";
+@import "../base";
 
 .row {
   @include flexbox(row, null, null, null);

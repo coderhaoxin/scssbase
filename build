@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-sass --sourcemap=none index.scss index.css
+rm example/*.css
+
 sass --sourcemap=none example/flexbox.scss example/flexbox.css
 sass --sourcemap=none example/index.scss example/index.css
 sass --sourcemap=none example/grid.scss example/grid.css
