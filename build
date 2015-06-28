@@ -4,4 +4,5 @@ rm example/*.css
 
 sass --sourcemap=none example/flexbox.scss example/flexbox.css
 sass --sourcemap=none example/index.scss example/index.css
+sass --sourcemap=none example/shape.scss example/shape.css
 sass --sourcemap=none example/grid.scss example/grid.css

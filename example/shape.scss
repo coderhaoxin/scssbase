@@ -1,0 +1,27 @@
+
+.polygon {
+  .one {
+    float: left;
+    width: 10rem;
+    color: red;
+    shape-margin: 0.5rem;
+    shape-outside: polygon(0 0, 100% 0, 10% 50%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 10% 50%, 100% 100%, 0 100%);
+  }
+
+  .two {
+    width: 16rem;
+    color: green;
+  }
+}
+
+.circle {
+  .noop {
+    float: left;
+    width: 8rem;
+    height: 8rem;
+    shape-outside: circle(4rem at 50% 50%);
+    -webkit-clip-path: circle(4rem at 50% 50%);
+    shape-margin: 0.2rem;
+  }
+}
