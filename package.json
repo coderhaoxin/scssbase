@@ -1,0 +1,9 @@
+{
+  "name": "scssbase",
+  "private": true,
+  "version": "0.4.0",
+  "description": "some utils for scss",
+  "repository": "onebook/scssbase",
+  "author": "haoxin",
+  "license": "MIT"
+}
