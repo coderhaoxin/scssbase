@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>gist index</title>
+  <script src="./index.js"></script>
+  <link rel="stylesheet" href="./progress.css">
+  <link rel="stylesheet" href="./slide.css">
+  <link rel="stylesheet" href="./popup.css">
+</head>
+<body onload="init()">
+  <div>
+    <div id="slide1" class="com-slide">
+      <div class="content">
+        +1
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div id="slide2" class="com-slide-show-hide">
+      <div>golang</div>
+      <div>nodejs</div>
+      <div>python</div>
+      <div>react</div>
+      <div>jade</div>
+      <div>js</div>
+    </div>
+  </div>
+
+  <div>
+    <div class="com-progress">
+      <div class="percent"></div>
+    </div>
+  </div>
+
+  <div>
+    <button onclick="pop('fade')">pop fade</button>
+    <button onclick="pop('scale')">pop scale</button>
+    <div class="com-popup">
+      <div>pop pop pop</div>
+    </div>
+  </div>
+
+  <style>
+    .com-slide-show-hide {
+      background: green;
+    }
+  </style>
+</body>
+</html>

@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-rm example/*.css
-
 sass --sourcemap=none example/flexbox.scss example/flexbox.css
 sass --sourcemap=none example/index.scss example/index.css
 sass --sourcemap=none example/shape.scss example/shape.css
 sass --sourcemap=none example/grid.scss example/grid.css
+
+sass --sourcemap=none gist/progress.scss gist/progress.css
+sass --sourcemap=none gist/slide.scss gist/slide.css
+sass --sourcemap=none gist/popup.scss gist/popup.css
