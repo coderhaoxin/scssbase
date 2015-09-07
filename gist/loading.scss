@@ -1,0 +1,34 @@
+
+@import "../base";
+
+.com-loading {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: gray;
+  opacity: 0.5;
+
+  .context {
+    @include flexbox(column, center, center, null);
+    height: 100%;
+    width: 100%;
+
+    img {
+      width: 64px;
+      height: 64px;
+      animation: rotate 1s linear infinite;
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}
