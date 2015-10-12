@@ -9,14 +9,23 @@
   border: 0;
 }
 
+html {
+  font-family: sans-serif;
+}
+
 html, body {
   height: 100%;
 }
 
 a {
+  background-color: transparent;
   text-decoration: none;
 }
 
-ul {
+ul, li {
   list-style: none;
+}
+
+a, span, aside {
+  display: inline-block;
 }
