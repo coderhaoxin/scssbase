@@ -23,16 +23,6 @@
   }
 }
 
-@mixin flexitem($order, $grow) {
-  @if $order {
-    order: $order;
-  }
-
-  @if $grow {
-    flex-grow: $grow;
-  }
-}
-
 @mixin griditem($row-start, $row-end, $column-start, $column-end) {
   @if $row-start {
     grid-row-start: $row-start;
@@ -52,16 +42,16 @@
 }
 
 @mixin wordblock {
+  text-overflow: ellipsis;
   word-break: break-all;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 @mixin wordline {
+  text-overflow: ellipsis;
   word-break: keep-all;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /**
