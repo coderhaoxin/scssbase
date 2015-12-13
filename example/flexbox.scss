@@ -7,7 +7,8 @@
 
   .avatar {
     @include flexbox(null, center, center, null);
-    @include flexitem(1, null);
+    -webkit-box-ordinal-group: 1;
+    order: 1;
     background: red;
     width: 80px;
 
@@ -20,7 +21,8 @@
 
   .desc {
     @include flexbox(column, null, null, null);
-    @include flexitem(2, null);
+    -webkit-box-ordinal-group: 2;
+    order: 2;
     background: yellow;
     font-size: 26px;
     width: 160px;
@@ -42,7 +44,8 @@
 
   .note {
     @include flexbox(column, null, null, null);
-    @include flexitem(3, null);
+    -webkit-box-ordinal-group: 3;
+    order: 3;
     background: blue;
     font-size: 12px;
     width: 80px;
@@ -78,21 +81,30 @@
 
   .avatar {
     @include flexbox(null, center, center, nowrap);
-    @include flexitem(1, 1);
+    -webkit-box-ordinal-group: 1;
+    order: 1;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
     background: red;
     width: 40px;
   }
 
   .desc {
     @include flexbox(column, null, null, wrap);
-    @include flexitem(2, 3);
+    -webkit-box-ordinal-group: 2;
+    order: 2;
+    -webkit-box-flex: 3;
+    flex-grow: 3;
     background: yellow;
     width: 40px;
   }
 
   .note {
     @include flexbox(column, null, null, nowrap);
-    @include flexitem(3, 1);
+    -webkit-box-ordinal-group: 3;
+    order: 3;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
     background: blue;
     width: 40px;
   }
